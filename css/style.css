@@ -1,4 +1,7 @@
-.img-gmbd{
-   
-    justify-content: center;
+body{
+    background-color: rgba(162, 209, 221, 0.822);
+}
+
+#search-btn{
+    background-color: rgba(133, 121, 241, 0.979);
 }
