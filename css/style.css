@@ -4,6 +4,7 @@ body{
 #Search-btn{
     background-color: rgb(255, 2, 137);
 }
-/* #card{
-    justify-content: center;
-} */
+#card{
+    background-color: rgba(149, 179, 41, 0.856);
+    color: whitesmoke;
+}

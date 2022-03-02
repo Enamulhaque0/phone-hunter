@@ -1,4 +1,6 @@
 const parent = document.getElementById("phones-container")
+const div = document.createElement("div");
+
 
 const allPhone = () => {
     let searchValue = document.getElementById("search-box");
@@ -11,6 +13,7 @@ const allPhone = () => {
 
     searchValue.value = '';
     parent.textContent = '';
+    div.textContent = "";
 
 }
 
@@ -46,14 +49,13 @@ const details = (id) => {
 }
 
 const phoneInfo = (info) => {
-    console.log(info)
     const parent = document.getElementById("card")
     parent.textContent = "";
-    const div = document.createElement("div");
+    // const div = document.createElement("div");
     div.classList.add("row");
     div.innerHTML = `
                 <div class="col-md-4 text-center">
-                  <img src="${info.image}" class="img-fluid rounded-start" alt="...">
+                  <img src="${info.image}" class="img-fluid rounded-start mt-5" alt="...">
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">
