@@ -19,10 +19,11 @@ const allPhone = () => {
 
 
 const showPhoneDetails = (phones) => {
+    console.log(phones.slice(0,20));
     if (phones.length == 0) {
         alert('not found')
     }
-    for (const phone of phones) {
+    for (const phone of phones.slice(0,20)) {
 
         const div = document.createElement("div");
         div.classList.add('col')
@@ -38,8 +39,10 @@ const showPhoneDetails = (phones) => {
         </div>
         `
         parent.appendChild(div);
-
+        
     }
+    console.log(phones)
+    
 }
 
 const details = (id) => {
@@ -67,14 +70,14 @@ const phoneInfo = (info) => {
               <h6><span class="fw-bold">Chipset:</span> ${info.mainFeatures.chipSet}</h6>
               <h6><span class="fw-bold">Display Size:</span> ${info.mainFeatures.displaySize}</h6>
               <h6><span class="fw-bold">Memory:</span> ${info.mainFeatures.memory}</h6>
-              <h6><span class="fw-bold">Sensors:</span> ${info.mainFeatures.sensors}</h6>
+              <h6><span class="fw-bold">Sensors:</span> ${info.mainFeatures.sensors.join(', ')}</h6>
                <h4 class="fw-bold"> Others</h4>
-              <h6><span class="fw-bold">Bluetooth:</span> ${info.others.Bluetooth}</h6>
-              <h6><span class="fw-bold">GPS:</span> ${info.others.GPS}</h6>
-              <h6><span class="fw-bold">NFC:</span> ${info.others.NFC}</h6>
-              <h6><span class="fw-bold">Radio:</span> ${info.others.Radio}</h6>
-             <h6><span class="fw-bold">USB:</span> ${info.others.USB}</h6>
-             <h6><span class="fw-bold">WLAN:</span> ${info.others.WLAN}</h6>
+              <h6><span class="fw-bold">Bluetooth:</span> ${info?.others?.Bluetooth ? info?.others?.Bluetooth : 'not found'}</h6>
+              <h6><span class="fw-bold">GPS:</span> ${info?.others?.GPS ? info?.others?.GPS : 'not found'}</h6>
+              <h6><span class="fw-bold">NFC:</span> ${info?.others?.NFC ? info?.others?.NFC : 'not found'}</h6>
+              <h6><span class="fw-bold">Radio:</span> ${info?.others?.Radio ? info.others.Radio : 'not found'}</h6>
+             <h6><span class="fw-bold">USB:</span> ${info?.others?.USB ? info.others.USB : 'Not found'}</h6>
+             <h6><span class="fw-bold">WLAN:</span> ${info?.others?.WLAN ? info.others.WLAN: 'not found'}</h6>
 
                     
                   </div>
