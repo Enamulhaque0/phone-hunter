@@ -1,7 +1,9 @@
 body{
     background-color: rgba(162, 209, 221, 0.822);
 }
-
-#search-btn{
-    background-color: rgba(133, 121, 241, 0.979);
+#Search-btn{
+    background-color: rgb(255, 2, 137);
 }
+/* #card{
+    justify-content: center;
+} */
